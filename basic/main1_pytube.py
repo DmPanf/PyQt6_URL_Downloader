@@ -1,7 +1,7 @@
 from pytube import YouTube
 
 # Specify the URL of the YouTube video
-video_url = "https://youtu.be/vWq-mIxvH3k"
+video_url = "https://youtu.be/..."
 
 # Create a YouTube object
 yt = YouTube(video_url)
