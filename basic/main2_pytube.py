@@ -7,6 +7,6 @@ def download_best_mp4_video(link):
         .order_by('resolution').desc().first()
     best_video.download()
 
-my_link = 'https://youtu.be/GON_7_Yfc1A'
+my_link = 'https://youtu.be/...'
 #YouTube(my_link).streams.first().download() # .3gpp
 download_best_mp4_video(my_link)
