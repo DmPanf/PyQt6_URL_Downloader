@@ -42,7 +42,7 @@ class VideoDownloaderApp(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle('YouTube Video and URL Links Downloader')
+        self.setWindowTitle('YouTube Video and URL Links Downloader 2023')
         self.setGeometry(600, 400, 790, 390)  # метода setGeometry() устанавливает позицию и размер # self.resize(500, 400)
         self.center()
 
@@ -54,7 +54,7 @@ class VideoDownloaderApp(QWidget):
         layout = QVBoxLayout(self)
         layout.setSpacing(10)
 
-        label = QLabel("⚙️ Список видео файлов:")
+        label = QLabel("⚙️ Video files list:")
         layout.addWidget(label)
 
         # Lighter Video Files ListWidget
@@ -72,7 +72,7 @@ class VideoDownloaderApp(QWidget):
         self.url_input.setStyleSheet("background-color: #464646;")
         layout.addWidget(self.url_input)
 
-        self.reset_button = QPushButton('Reset URL', self)
+        self.reset_button = QPushButton('RESET', self)
         self.reset_button.setFixedHeight(40)  # Устанавливаем высоту
         self.reset_button.setStyleSheet("""
             QPushButton {
@@ -88,7 +88,7 @@ class VideoDownloaderApp(QWidget):
         layout.addWidget(self.reset_button)
 
 
-        self.download_button = QPushButton('Download File', self)
+        self.download_button = QPushButton('DOWNLOAD', self)
         self.download_button.setFixedHeight(40)  # Устанавливаем высоту
         self.download_button.setStyleSheet("""
             QPushButton {
@@ -104,7 +104,7 @@ class VideoDownloaderApp(QWidget):
         layout.addWidget(self.download_button)
 
         # Download audio button
-        self.download_audio_button = QPushButton('Grab Audio', self)
+        self.download_audio_button = QPushButton('AUDIO Grab', self)
         self.download_audio_button.setFixedHeight(40)  # Устанавливаем высоту
         self.download_audio_button.setStyleSheet("""
             QPushButton {
@@ -132,7 +132,7 @@ class VideoDownloaderApp(QWidget):
 
         # QTextEdit to copy text with modified height and color
         self.message_label = QTextEdit('')
-        self.message_label.setPlaceholderText("Вывод информации...")  # добавляем фоновую надпись
+        self.message_label.setPlaceholderText("Information...")  # добавляем фоновую надпись
         self.message_label.setReadOnly(True)
         self.message_label.setFixedHeight(60)  # Устанавливаем высоту
         self.message_label.setStyleSheet("background-color: #1E1E1E;")  # Темный цвет фона
