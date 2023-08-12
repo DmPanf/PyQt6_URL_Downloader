@@ -1,2 +1,3 @@
-# Files Dpwnloader based on PyQt6
+# Files Downloader based on PyQt6
+
 
