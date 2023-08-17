@@ -1,9 +1,19 @@
 from pytube import YouTube
 import configparser
+import os
 
+def check_and_create_download_path(path):
+    """Проверяет наличие указанной директории и, если она не существует, создаёт её."""
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+# Читаем файл конфигурации
 config = configparser.ConfigParser()
 config.read('config.ini')
 download_path = config['DOWNLOAD']['path']
+
+# Проверяем и создаем папку для загрузки, если она не существует
+check_and_create_download_path(download_path)
 
 
 def progress_bar(stream, chunk, bytes_remaining):
